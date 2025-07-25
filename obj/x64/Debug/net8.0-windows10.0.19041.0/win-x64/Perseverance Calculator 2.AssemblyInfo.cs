@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Perseverance Calculator 2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbeae0f4050d1cd7e3ad5a9b15e45f6e06635869")]
 [assembly: System.Reflection.AssemblyProductAttribute("Perseverance Calculator 2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Perseverance Calculator 2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
