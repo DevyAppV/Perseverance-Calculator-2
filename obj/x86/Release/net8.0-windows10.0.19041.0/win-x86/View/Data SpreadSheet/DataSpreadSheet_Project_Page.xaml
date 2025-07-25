@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:ConnectionId='1'
+    x:Class="Perseverance_Calculator_2.View.Data_SpreadSheet.DataSpreadSheet_Project_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perseverance_Calculator_2.View.Data_SpreadSheet"
+    xmlns:logic="using:Perseverance_Calculator_2.Logic"
+    xmlns:dataSpreadsheet="using:Perseverance_Calculator_2.Model.Data_Spreadsheet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical">
+            <StackPanel.Resources>
+                <!--<Grid.Resources>-->
+                    <ResourceDictionary>
+
+                        <ResourceDictionary.MergedDictionaries>
+                            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                            <ResourceDictionary Source="ms-appx:///Theme/MainTheme.xaml"/>
+                        </ResourceDictionary.MergedDictionaries>
+
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="3"></Setter>
+                        <Setter Property="Background" Value="{StaticResource DataSpreadsheetButton_BackgroundColor}"></Setter>
+                        <Setter Property="Foreground" Value="{StaticResource DataSpreadsheetButton_ForegroundColor}"></Setter>
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Margin" Value="3"></Setter>
+                    </Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="8"></Setter>
+                    </Style>
+                </ResourceDictionary>
+                <!--</Grid.Resources>-->
+            </StackPanel.Resources>
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='8'                                                                       Content="Add Spreadsheet"                                    ></Button>
+                <TextBox x:ConnectionId='9'                                                                       x:FieldModifier="public" x:Name="SpreadsheetName_Tbox" PlaceholderText="Spreadsheet Name"></TextBox>
+            </StackPanel>
+
+            <TextBlock x:ConnectionId='2'                                                                       Text="Projects"></TextBlock>
+            <ScrollViewer>
+                <ItemsControl x:ConnectionId='3'                                                                                >
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate                                                     >
+                            <StackPanel x:ConnectionId='5' Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:ConnectionId='6'                                                                       Content="X"                                                                                         ></Button>
+                                    <!-- DATA Binding -->
+                                    <Button x:ConnectionId='7'                                                                                                                                                                                                                                          ></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+        </StackPanel>
+
+
+
+    </ScrollViewer>
+</Page>
+

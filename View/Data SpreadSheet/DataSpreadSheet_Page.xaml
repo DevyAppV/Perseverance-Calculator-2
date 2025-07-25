@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Perseverance_Calculator_2.View.Data_SpreadSheet.DataSpreadSheet_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perseverance_Calculator_2.View.Data_SpreadSheet"
+    xmlns:logic="using:Perseverance_Calculator_2.Logic"
+    xmlns:dataSpreadsheet="using:Perseverance_Calculator_2.Model.Data_Spreadsheet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical">
+            <StackPanel.Resources>
+                <ResourceDictionary>
+
+                    <ResourceDictionary.MergedDictionaries>
+                        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                        <ResourceDictionary Source="ms-appx:///Theme/MainTheme.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="3"></Setter>
+                        <Setter Property="Background" Value="{StaticResource DataSpreadsheetButton_BackgroundColor}"></Setter>
+                        <Setter Property="Foreground" Value="{StaticResource DataSpreadsheetButton_ForegroundColor}"></Setter>
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Margin" Value="3"></Setter>
+                    </Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="8"></Setter>
+                    </Style>
+                </ResourceDictionary>
+            </StackPanel.Resources>
+            <!--<StackPanel Orientation="Horizontal">
+                <Button Content="Search"></Button>
+                <TextBox PlaceholderText="Search Data"></TextBox>
+            </StackPanel>-->
+            <StackPanel Orientation="Horizontal">
+                <Button FontSize="{x:Bind logic:Main_Logic.main_Model.FontSize, Mode=OneWay}" x:FieldModifier="public" x:Name="AddData_Button" Content="Add Data" Click="Add_Button_Click"></Button>
+                <TextBlock FontSize="{x:Bind logic:Main_Logic.main_Model.FontSize, Mode=OneWay}" x:FieldModifier="public" x:Name="SelectedSpreadsheet_Name" Text="{x:Bind logic:Main_Logic.selection_Model.SelectedDataSpreadsheet_Name,Mode=OneWay}"></TextBlock>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <ItemsControl x:FieldModifier="public" x:Name="DataList_ItemsControl" ItemsSource="{x:Bind logic:Main_Logic.selection_Model.DataSpreadsheet_List,Mode=OneWay}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="dataSpreadsheet:DataSpreadsheet">
+                            <StackPanel Orientation="Horizontal">
+                                <!--Binding-->
+                                <Button FontSize="{x:Bind logic:Main_Logic.main_Model.FontSize, Mode=OneWay}" Content="X" Tag="{x:Bind}" Click="RemoveData_Button_Click"></Button>
+                                <Button FontSize="{x:Bind logic:Main_Logic.main_Model.FontSize, Mode=OneWay}" Content="Set Data" Click="SetData_Button_Click" IsEnabled="{x:Bind EnableSetData, Mode=OneWay}" Tag="{x:Bind}"></Button>
+                                <TextBox FontSize="{x:Bind logic:Main_Logic.main_Model.FontSize, Mode=OneWay}" x:Name="DataName_Tbox" PlaceholderText="Data Name" Text="{x:Bind DataName, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="DataTextBox_TextChanged" Tag="{x:Bind}"></TextBox>
+                                <TextBox FontSize="{x:Bind logic:Main_Logic.main_Model.FontSize, Mode=OneWay}" PlaceholderText="Data Value" Text="{x:Bind DataValue, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="DataTextBox_TextChanged" Tag="{x:Bind}"></TextBox>
+                                <TextBox FontSize="{x:Bind logic:Main_Logic.main_Model.FontSize, Mode=OneWay}" PlaceholderText="Data Description" Text="{x:Bind DataDescription, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextChanged="DataTextBox_TextChanged" Tag="{x:Bind}"></TextBox>
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perseverance_Calculator_2.Theme">
+    <!--xmlns:local="using:Perseverance_Calculator_2.Theme"-->
+
+
+    <SolidColorBrush x:Key="DefaultText_ForgroundColor" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="BackgroundColor_Main" Color="#1a1a1a"></SolidColorBrush>
+    <SolidColorBrush x:Key="ResizeGrid_BackgroundColor" Color="#2b2b2b"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="PrimaryTemplate_BackgroundColor" Color="#2b2b2b"></SolidColorBrush>
+    <SolidColorBrush x:Key="SecondaryTemplate_BackgroundColor" Color="#454545"></SolidColorBrush>
+    <SolidColorBrush x:Key="PrimaryTemplate_ForegroundColor" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="SecondaryTemplate_ForgroundColor" Color="White"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="IsIgnoreCol_StackPanel_BackgroundColor" Color="#2b2b2b"></SolidColorBrush>
+    <SolidColorBrush x:Key="CustomButtonText_ForegroundColor" Color="LightGreen"></SolidColorBrush>
+    <SolidColorBrush x:Key="CustomButtonTabs_BackgroundColor" Color="#212121"></SolidColorBrush>
+    <SolidColorBrush x:Key="CustomButtonTabs_ForgroundColor" Color="White"></SolidColorBrush>
+    
+    <SolidColorBrush x:Key="FormulaButton_BackgroundColor" Color="#2b2b2b"></SolidColorBrush>
+    <SolidColorBrush x:Key="CustomButton_BackgroundColor" Color="#2b2b2b"></SolidColorBrush>
+    <SolidColorBrush x:Key="DataSpreadsheetButton_BackgroundColor" Color="#2b2b2b"></SolidColorBrush>
+    <SolidColorBrush x:Key="FormulaButton_ForegroundColor" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="CustomButton_ForegroundColor" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="DataSpreadsheetButton_ForegroundColor" Color="White"></SolidColorBrush>
+
+
+    
+</ResourceDictionary>
+

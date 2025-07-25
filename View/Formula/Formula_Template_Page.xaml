@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Perseverance_Calculator_2.View.Formula.Formula_Template_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perseverance_Calculator_2.View.Formula"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--<ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch">-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="FormulaProject_Resizable_Col" Width="350"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition x:Name="FormulaList_Resizable_Col" Width="550"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Resources>
+
+            <ResourceDictionary>
+
+                <ResourceDictionary.MergedDictionaries>
+                    <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                    <ResourceDictionary Source="ms-appx:///Theme/MainTheme.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <Grid Background="{StaticResource ResizeGrid_BackgroundColor}"
+          Grid.Column="1"
+          Width="7"
+          PointerPressed="DragHandle_PointerPressed"
+          PointerReleased="DragHandle_PointerReleased"
+          PointerMoved="DragHandle_Col1_PointerMoved"
+              />
+
+        <Grid Background="{StaticResource ResizeGrid_BackgroundColor}"
+          Grid.Column="3"
+          Width="7"
+          PointerPressed="DragHandle_PointerPressed"
+          PointerReleased="DragHandle_PointerReleased"
+          PointerMoved="DragHandle_Col2_PointerMoved"
+              />
+
+        <Frame x:Name="Formula_Template_FrameColumn0" Grid.Column="0" Loaded="Formula_Template_FrameColumn0_Loaded">
+
+        </Frame>
+
+        <Frame x:Name="Formula_Template_FrameColumn1" Grid.Column="2" Loaded="Formula_Template_FrameColumn1_Loaded">
+
+        </Frame>
+
+        <Frame x:Name="Formula_Template_FrameColumn2" Grid.Column="4" Loaded="Formula_Template_FrameColumn2_Loaded">
+
+        </Frame>
+
+    </Grid>
+    <!--</ScrollViewer>-->
+</Page>

@@ -1,0 +1,14 @@
+App.xbf
+MainWindow.xbf
+Theme\MainTheme.xbf
+View\Data SpreadSheet\DataSpreadSheet_Page.xbf
+View\Data SpreadSheet\DataSpreadSheet_Project_Page.xbf
+View\Data SpreadSheet\DataSpreadSheet_Template_Page.xbf
+View\Formula\CustomButtons_Description_Page.xbf
+View\Formula\CustomButtons_Page.xbf
+View\Formula\Formula_List_Page.xbf
+View\Formula\Formula_Project_Page.xbf
+View\Formula\Formula_Template_Page.xbf
+View\Graphing\2D\Graphing2D_Page.xbf
+View\Graphing\2D\Graphing2D_Template_Page.xbf
+View\Single Page Window\SinglePage_Template_Page.xbf
